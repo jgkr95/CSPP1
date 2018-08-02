@@ -1,4 +1,8 @@
-n=2
-for n in range(2,12,2):
-	print(n)
-print("Goodbye!")
+count = 0
+n=input()
+print(n)
+for letter in 'Snow!': 
+    print('Letter # ' + str(3)+ ' is ' + letter)
+    count += 1
+    break
+print(count)
