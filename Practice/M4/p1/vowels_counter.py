@@ -4,7 +4,7 @@
 
 def main():
     '''This is the main method'''
-    st_vo = raw_input()
+    st_vo = input()
     vowels = 0
     for i in st_vo:
         if i in ("a", "e", "i", "o", "u"):
