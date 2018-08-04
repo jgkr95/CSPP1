@@ -15,7 +15,7 @@ def main():
             m_in = m_in * rem_i
             int_in = int_in // 10
         m_in = m_in * -1
-        print(str(m_in))      
+        print(str(m_in))
     elif int_input > 0:
         while int_input > 0:
             rem_i = int_input % 10
