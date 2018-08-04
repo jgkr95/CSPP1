@@ -19,12 +19,14 @@ def main():
                 int_in = int_in // 10
             m_in = m_in * -1
             print(str(m_in))
+            break
         else:
             while int_input > 0:
                 rem_i = int_input % 10
                 m_in = m_in * rem_i
                 int_input = int_input // 10
                 print(str(m_in))
+                break
 
 if __name__ == "__main__":
     main()
