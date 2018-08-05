@@ -9,7 +9,6 @@ Longest substring in alphabetical order is: abc'''
 def main():
     '''This is main method '''
     s_s = input()
-    print(s_s)
     max_str = ""
     max_len = 0
     length_s = len(s_s)
