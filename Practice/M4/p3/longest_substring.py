@@ -7,25 +7,19 @@ For example, if s = 'abcbcd', then your program should print
 Longest substring in alphabetical order is: abc'''
 def main():
     '''This is main method '''
-    s_s = input()
-    m_m = 0
-    n_n = ""
-    st_st = ""
-    # the input string is in s
-    length = len(s_s)
-    c_c = 0
-    for i in range(length-1):
-        if ord(s_s[i]) <= ord(s_s[i+1]):
-            n_n = n_n + s_s[i]
-            c_c = c_c + 1
-        else:
-            n_n = n_n + s_s[i]
-            c_c = c_c+1
-            if c_c > m_m:
-                m_m = c_c
-                st_st = n_n
-                n_n = ""
-            c_c = 0
-    print(st_st)
+    s = input()
+    max_str=""
+    max_len=0
+    for i in range(len(s)): 
+        if(i+1 < len(s)): 
+            if(s[i]<s[i+1]) : 
+                temp_len=1 
+                j=i+1       
+                while j+1 <len(s) and s[j]<=s[j+1]: 
+                        temp_len=temp_len+1
+
+                if(temp_len > max_len): 
+                        max_str = s[i:j+1]
+    print(max_str)
 if __name__ == "__main__":
     main()
