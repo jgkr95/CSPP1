@@ -14,9 +14,9 @@ def iterPower(base, exp):
     # Your code here
     temp = base
     if exp == 1:
-        return 1
-    elif exp == 0:
         return base
+    elif exp == 0:
+        return 1
     while exp != 1:
         base = base * temp
         exp = exp - 1
