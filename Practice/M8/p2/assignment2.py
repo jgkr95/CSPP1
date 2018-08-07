@@ -13,6 +13,8 @@ def sumofdigits(n_n):
     return n_n
 def main():
     '''s'''
+    import sys
+    sys.setrecursionlimit(25500)
     a_a = input()
     print(sumofdigits(int(a_a)))
 if __name__ == "__main__":
