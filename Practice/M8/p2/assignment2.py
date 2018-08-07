@@ -14,7 +14,7 @@ def sumofdigits(n_n):
 def main():
     '''s'''
     import sys
-    sys.setrecursionlimit(415500)
+    sys.setrecursionlimit(1500)
     a_a = input()
     print(sumofdigits(int(a_a)))
 if __name__ == "__main__":
