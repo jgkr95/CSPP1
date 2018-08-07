@@ -20,4 +20,6 @@ def main():
     print(factorial(int(a_a)))
 
 if __name__ == "__main__":
+    import sys
+    sys.setrecursionlimit(1500)
     main()
