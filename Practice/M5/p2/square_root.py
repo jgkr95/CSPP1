@@ -8,10 +8,7 @@ def main():
     i_n = 0.1
     while abs(g_s**2 - s_r) >= ep_n and g_s <= s_r:
         g_s += i_n
-    if g_s**2 - s_r >= ep_n:
-        print('')
-    else:
-        print(g_s)
+    print(g_s)
 
 if __name__ == "__main__":
     main()

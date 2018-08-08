@@ -1,7 +1,8 @@
-# Exercise: GCDRecr
-# Write a Python function, gcdRecur(a, b), that takes in two numbers and returns the GCD(a,b) of given a and b.
+'''# Exercise: GCDRecr
+# Write a Python function, gcdRecur(a, b), that takes in two numbers and returns the
+ GCD(a,b) of given a and b.
 
-# This function takes in two numbers and returns one number.
+# This function takes in two numbers and returns one number.'''
 
 
 def gcdRecur(a, b):
