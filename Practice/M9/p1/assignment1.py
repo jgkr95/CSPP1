@@ -16,8 +16,8 @@ def is_word_guessed(secret_word, letters_guessed):
     '''
     # FILL IN YOUR CODE HERE...
     count_ = 0
-    for index_ in range(len(secret_word)):
-        if secret_word[index_] in letters_guessed:
+    for index_ in secret_word:
+        if index_ in letters_guessed:
             count_ = count_ + 1
     if count_ == len(secret_word):
         return True
