@@ -41,6 +41,8 @@ def create_social_network(data):
     data = data.strip().split('\n')
     # l = len(data)
     #for i in range(l):
+    if "follows" not in dat:
+        return aDict
     for element in data:
         k, v = element.split(" follows ")
         # print("k=",k)
@@ -53,9 +55,6 @@ def create_social_network(data):
         else:
             aDict[k].append(v)
         # print(aDict)
-
-
-
     return aDict
 
 def main():
