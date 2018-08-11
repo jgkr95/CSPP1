@@ -38,16 +38,23 @@ def create_social_network(data):
 
 
     aDict = {}
-    data = data.split('\n')
+    data = data.strip().split('\n')
+    l = len(data)
+    #for i in range(l):
     for element in data:
         k, v = element.split(" follows ")
-        # v = int(v)
+        print("k=",k)
+        #print("v=",type(v),v)
+        #v=v.split(',')
+        print(v)
         v = re.split(',',v)
         if k not in aDict:
             aDict[k] = v
         else:
             aDict[k].append(v)
-        
+        # print(aDict)
+
+
 
     return aDict
 
