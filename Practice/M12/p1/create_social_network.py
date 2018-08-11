@@ -46,7 +46,7 @@ def create_social_network(data):
         # print("k=",k)
         #print("v=",type(v),v)
         #v=v.split(',')
-        print(v)
+        # print(v)
         v = re.split(',',v)
         if k not in aDict:
             aDict[k] = v
