@@ -64,20 +64,21 @@ def main():
     '''
         handling testcase input and printing output
     '''
-    network = eval(input())
-    lines = int(input())
-    for i in range(lines):
-        i += 1
-        line = input()
-        output = line.split(" ")
-        if output[0] == "follow":
-            network = follow(network, output[1], output[2])
-        elif output[0] == "unfollow":
-            network = unfollow(network, output[1], output[2])
-        elif output[0] == "delete":
-            network = delete_person(network, output[1])
+    print(input())
+    # network = eval(input())
+    # lines = int(input())
+    # for i in range(lines):
+    #     i += 1
+    #     line = input()
+    #     output = line.split(" ")
+    #     if output[0] == "follow":
+    #         network = follow(network, output[1], output[2])
+    #     elif output[0] == "unfollow":
+    #         network = unfollow(network, output[1], output[2])
+    #     elif output[0] == "delete":
+    #         network = delete_person(network, output[1])
 
-    print(network)
+    # print(network)
 
 if __name__ == "__main__":
     main()
