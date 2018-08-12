@@ -35,7 +35,7 @@ def unfollow(network, arg1, arg2):
     print(network)
     for arg2 in network:
         if arg1 in network[arg2]:
-            network[arg2].pop(arg1)
+            network[arg2].remove(arg1)
     print(network)
     return network
 
