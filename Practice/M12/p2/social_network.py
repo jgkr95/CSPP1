@@ -54,10 +54,10 @@ def delete_person(network, arg1):
     for index_ in network:
         if arg1 in network[index_]:
             network[index_].values(pop(arg1))
-    print(network)
+    # print(network)
     if arg1 in network:
         del network[arg1]
-    print(network)
+    # print(network)
     return network
 
 def main():
