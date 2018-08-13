@@ -21,7 +21,7 @@ def updateHand(hand, word):
     # TO DO ... <-- Remove this comment when you code this function
     updatedhand = hand.copy()
     for letter in word:
-        if letter in hand:
+        # if letter in hand:
             updatedhand[letter] = updatedhand[letter] - 1
     return updatedhand
     
