@@ -22,7 +22,7 @@ def updateHand(hand, word):
     updatedhand = hand.copy()
     for letter in word:
         # if letter in hand:
-            updatedhand[letter] = updatedhand[letter] - 1
+            updatedhand[letter] -= 1 
     return updatedhand
     
 
