@@ -14,11 +14,11 @@ def follow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    print(network)
+    # print(network)
     for arg1 in network:
         if arg2 not in network[arg1]:
             network[arg1].append(arg2)
-    print(network)        
+    # print(network)        
     return network
 
 
@@ -65,20 +65,20 @@ def main():
         handling testcase input and printing output
     '''
     print(eval(input()))
-    # network = eval(input())
-    # lines = int(input())
-    # for i in range(lines):
-    #     i += 1
-    #     line = input()
-    #     output = line.split(" ")
-    #     if output[0] == "follow":
-    #         network = follow(network, output[1], output[2])
-    #     elif output[0] == "unfollow":
-    #         network = unfollow(network, output[1], output[2])
-    #     elif output[0] == "delete":
-    #         network = delete_person(network, output[1])
+    network = eval(input())
+    lines = int(input())
+    for i in range(lines):
+        i += 1
+        line = input()
+        output = line.split(" ")
+        if output[0] == "follow":
+            network = follow(network, output[1], output[2])
+        elif output[0] == "unfollow":
+            network = unfollow(network, output[1], output[2])
+        elif output[0] == "delete":
+            network = delete_person(network, output[1])
 
-    # print(network)
+    print(network)
 
 if __name__ == "__main__":
     main()
