@@ -15,9 +15,11 @@ def follow(network, arg1, arg2):
     '''
     # remove the pass below and start writing your code
     # print(network)
-    for arg1 in network:
+    if arg1 in network:
         if arg2 not in network[arg1]:
             network[arg1].append(arg2)
+    else:
+        network[arg1] = [arg2]
     # print(network)        
     return network
 
@@ -64,7 +66,7 @@ def main():
     '''
         handling testcase input and printing output
     '''
-    print(eval(input()))
+    # print(eval(input()))
     network = eval(input())
     lines = int(input())
     for i in range(lines):
