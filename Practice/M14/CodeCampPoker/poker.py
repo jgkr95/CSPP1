@@ -3,6 +3,127 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+def is_fourofa_kind(hand):
+	length = len(hand)
+    newhandvalues = []
+    for i in range(length):
+        if hand[i][0] == 'A':
+            newhandvalues.append(14)
+        elif hand[i][0] == 'K':
+            newhandvalues.append(13)
+        elif hand[i][0] == 'Q':
+            newhandvalues.append(12)
+        elif hand[i][0] == 'J':
+            newhandvalues.append(11)
+        elif hand[i][0] == 'T':
+            newhandvalues.append(10)
+        else:
+            newhandvalues.append(int(hand[i][0]))
+    newhandvalues.sort()
+    for index in range(length-4):
+    	if newhandvalues[i] == newhandvalues[i+1] == newhandvalues[i+2] == newhandvalues[i+3]:
+    		return True
+    return False
+
+def is_threeofa_kind(hand):
+	length = len(hand)
+    newhandvalues = []
+    for i in range(length):
+        if hand[i][0] == 'A':
+            newhandvalues.append(14)
+        elif hand[i][0] == 'K':
+            newhandvalues.append(13)
+        elif hand[i][0] == 'Q':
+            newhandvalues.append(12)
+        elif hand[i][0] == 'J':
+            newhandvalues.append(11)
+        elif hand[i][0] == 'T':
+            newhandvalues.append(10)
+        else:
+            newhandvalues.append(int(hand[i][0]))
+    newhandvalues.sort()
+    for index in range(length-3):
+    	if newhandvalues[i] == newhandvalues[i+1] == newhandvalues[i+2]
+    		return True
+    return False
+
+def is_one_pair(hand):
+	length = len(hand)
+    newhandvalues = []
+    for i in range(length):
+        if hand[i][0] == 'A':
+            newhandvalues.append(14)
+        elif hand[i][0] == 'K':
+            newhandvalues.append(13)
+        elif hand[i][0] == 'Q':
+            newhandvalues.append(12)
+        elif hand[i][0] == 'J':
+            newhandvalues.append(11)
+        elif hand[i][0] == 'T':
+            newhandvalues.append(10)
+        else:
+            newhandvalues.append(int(hand[i][0]))
+    newhandvalues.sort()
+
+    for index in range(length-1):
+    	if newhandvalues[i] == newhandvalues[i+1]:
+    		return True
+    return False
+
+def is_fullhouse(hand):
+	length = len(hand)
+    newhandvalues = []
+    for i in range(length):
+        if hand[i][0] == 'A':
+            newhandvalues.append(14)
+        elif hand[i][0] == 'K':
+            newhandvalues.append(13)
+        elif hand[i][0] == 'Q':
+            newhandvalues.append(12)
+        elif hand[i][0] == 'J':
+            newhandvalues.append(11)
+        elif hand[i][0] == 'T':
+            newhandvalues.append(10)
+        else:
+            newhandvalues.append(int(hand[i][0]))
+    newhandvalues.sort()
+    count_ = []
+    for i in newhandvalues:
+    	count_[i] = newhandvalues.count(i)
+    if 3 in count_:
+    	if 2 in count_:
+    		return True
+    return False
+
+
+
+
+
+
+def is_two_pair(hand):
+	length = len(hand)
+    newhandvalues = []
+    for i in range(length):
+        if hand[i][0] == 'A':
+            newhandvalues.append(14)
+        elif hand[i][0] == 'K':
+            newhandvalues.append(13)
+        elif hand[i][0] == 'Q':
+            newhandvalues.append(12)
+        elif hand[i][0] == 'J':
+            newhandvalues.append(11)
+        elif hand[i][0] == 'T':
+            newhandvalues.append(10)
+        else:
+            newhandvalues.append(int(hand[i][0]))
+    l = set(newhandvalues)
+    	if len(l) == 3:
+    		return True
+    return False
+
+
+
+
 
 def is_straight(hand):
     '''
@@ -69,11 +190,21 @@ def hand_rank(hand):
     # Let's not think about the logic in the hand_rank function
     # Instead break it down into two sub functions is_straight and is_flush
     if is_straight(hand) and is_flush(hand):
-        return 3
-    elif is_flush(hand):
-        return 2
-    elif is_straight(hand):
         return 1
+    if is_fourofa_kind(hand):
+    	return 2
+    if is_fullhouse(hand):
+    	return 3
+    if is_flush(hand):
+        return 4
+    if is_straight(hand):
+        return 5
+    if is_threeofa_kind(hand):
+    	return 6
+    if is_two_pair(hand):
+    	return 7
+    if is_one_pair(hand):
+    	return 8
     # check for straight, flush and straight flush
     # best hand of these 3 would be a straight flush with the return value 3
     # the second best would be a flush with the return value 2
