@@ -5,7 +5,7 @@
 '''
 def is_fourofa_kind(hand):
 	length = len(hand)
-	newhandvalues = []
+	newhandvalues =[]
 	for i in range(length):
 		if hand[i][0] == 'A':
 			newhandvalues.append(14)
