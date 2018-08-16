@@ -3,8 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-max_check = {'pair':[],'twopair':[],}
-
+pair = []
 def is_fourofa_kind(hand):
     length = len(hand)
     newhandvalues = []
@@ -69,8 +68,9 @@ def is_one_pair(hand):
 
     for i in range(length-1):
         if newhandvalues[i] == newhandvalues[i+1]:
-            max_check['pair'].append(newhandvalues[i])
-            if newhandvalues[i] > max(max_check['pair']):
+            global pair
+            pair.append(newhandvalues[i])
+            if newhandvalues[i] > max(pair):
                 return True
     return False
 
