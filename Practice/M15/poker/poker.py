@@ -33,7 +33,7 @@ def maxhands(hand):
         if newhandvalues[i] == newhandvalues[i+1]:
             max_check['pair'].append(newhandvalues[i])
             return
-    max_check['high'].append(max(newhandvalues))
+    # max_check['high'].append(max(newhandvalues))
 
 
 
@@ -207,26 +207,26 @@ def is_flush(hand):
         if hand[i][1] != hand[i+1][1]:
             return False
     return True
-def high_card(hand):
-    length = len(hand)
-    newhandvalues = []
-    for i in range(length):
-        if hand[i][0] == 'A':
-            newhandvalues.append(14)
-        elif hand[i][0] == 'K':
-            newhandvalues.append(13)
-        elif hand[i][0] == 'Q':
-            newhandvalues.append(12)
-        elif hand[i][0] == 'J':
-            newhandvalues.append(11)
-        elif hand[i][0] == 'T':
-            newhandvalues.append(10)
-        else:
-            newhandvalues.append(int(hand[i][0]))
-    newhandvalues.sort()
-    if max(newhandvalues) > max(max_check['high']):
-        return True
-    return False
+# def high_card(hand):
+#     length = len(hand)
+#     newhandvalues = []
+#     for i in range(length):
+#         if hand[i][0] == 'A':
+#             newhandvalues.append(14)
+#         elif hand[i][0] == 'K':
+#             newhandvalues.append(13)
+#         elif hand[i][0] == 'Q':
+#             newhandvalues.append(12)
+#         elif hand[i][0] == 'J':
+#             newhandvalues.append(11)
+#         elif hand[i][0] == 'T':
+#             newhandvalues.append(10)
+#         else:
+#             newhandvalues.append(int(hand[i][0]))
+#     newhandvalues.sort()
+#     if max(newhandvalues) >= max(max_check['high']):
+#         return True
+#     return False
 
 
 
