@@ -265,15 +265,15 @@ def hand_rank(hand):
     if is_one_pair(hand):
         # print(hand)
         return 8
-    elif high_card(hand):
-        return 9
+    # elif high_card(hand):
+    #     return 9
     # check for straight, flush and straight flush
     # best hand of these 3 would be a straight flush with the return value 3
     # the second best would be a flush with the return value 2
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    return 10
+    return 9
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
