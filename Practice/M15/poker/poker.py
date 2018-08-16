@@ -265,8 +265,8 @@ def hand_rank(hand):
     if is_one_pair(hand):
         # print(hand)
         return 8
-    elif high_card(hand):
-        return 9
+    # elif high_card(hand):
+    #     return 9
     # check for straight, flush and straight flush
     # best hand of these 3 would be a straight flush with the return value 3
     # the second best would be a flush with the return value 2
