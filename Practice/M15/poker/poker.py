@@ -99,7 +99,7 @@ def is_one_pair(hand):
             newhandvalues.append(int(hand[i][0]))
     newhandvalues.sort()
     # print(newhandvalues)
-    print(max_check['pair'])
+    # print(max_check['pair'])
     for i in range(length-1):
         if newhandvalues[i] == newhandvalues[i+1]:
 
