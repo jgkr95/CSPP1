@@ -100,7 +100,7 @@ def is_one_pair(hand):
             newhandvalues.append(int(hand[i][0]))
     newhandvalues.sort()
     # print(newhandvalues)
-    # print(max_check['pair'])
+    print(max_check['pair'])
     for i in range(length-1):
         if newhandvalues[i] == newhandvalues[i+1]:
 
@@ -247,7 +247,7 @@ def hand_rank(hand):
     # What would be the logic to determine if a hand is a straight or flush?
     # Let's not think about the logic in the hand_rank function
     # Instead break it down into two sub functions is_straight and is_flush
-    maxhands(hand)
+    # maxhands(hand)
     if is_straight(hand) and is_flush(hand):
         return 1
     if is_fourofa_kind(hand):
@@ -266,7 +266,7 @@ def hand_rank(hand):
         # print(hand)
         return 8
     elif high_card(hand):
-         return 9
+        return 9
     # check for straight, flush and straight flush
     # best hand of these 3 would be a straight flush with the return value 3
     # the second best would be a flush with the return value 2
