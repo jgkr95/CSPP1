@@ -225,7 +225,7 @@ def high_card(hand):
             newhandvalues.append(int(hand[i][0]))
     newhandvalues.sort()
     s = set(newhandvalues)
-    if len(s)=5:
+    if len(s) == 5:
         if max(newhandvalues) >= max(max_check['high']):
             return True
     return False
