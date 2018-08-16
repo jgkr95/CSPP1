@@ -3,7 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-max_check={'pair':[],'twopair':[],'four':[],'three':[]}
+max_check={'pair':[],'twopair':[],'four':[],'three':[],'high':[]}
 def maxhands(hand):
     length = len(hand)
     newhandvalues = []
@@ -33,6 +33,7 @@ def maxhands(hand):
         if newhandvalues[i] == newhandvalues[i+1]:
             max_check['pair'].append(newhandvalues[i])
             return
+    max_check['high'].append(max(newhandvalues))
 
 
 
@@ -206,6 +207,26 @@ def is_flush(hand):
         if hand[i][1] != hand[i+1][1]:
             return False
     return True
+def high_card(hand):
+    length = len(hand)
+    newhandvalues = []
+    for i in range(length):
+        if hand[i][0] == 'A':
+            newhandvalues.append(14)
+        elif hand[i][0] == 'K':
+            newhandvalues.append(13)
+        elif hand[i][0] == 'Q':
+            newhandvalues.append(12)
+        elif hand[i][0] == 'J':
+            newhandvalues.append(11)
+        elif hand[i][0] == 'T':
+            newhandvalues.append(10)
+        else:
+            newhandvalues.append(int(hand[i][0]))
+    newhandvalues.sort()
+    if max(newhandvalues) > max(max_check['high']):
+        return True
+    return False
 
 
 
@@ -244,13 +265,15 @@ def hand_rank(hand):
     if is_one_pair(hand):
         # print(hand)
         return 8
+    if high_card(hand):
+        return 9
     # check for straight, flush and straight flush
     # best hand of these 3 would be a straight flush with the return value 3
     # the second best would be a flush with the return value 2
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    return 9
+    return 10
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
