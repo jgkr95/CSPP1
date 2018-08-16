@@ -3,7 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-max_check={'pair':[],'twopair':[],'four':[],}
+max_check={'pair':[],'twopair':[],'four':[],'three':[]}
 def maxhands(hand):
     length = len(hand)
     newhandvalues = []
