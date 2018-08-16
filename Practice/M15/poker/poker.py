@@ -3,6 +3,8 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+max_check = {'pair':[],'twopair':[],}
+
 def is_fourofa_kind(hand):
     length = len(hand)
     newhandvalues = []
@@ -191,7 +193,6 @@ def hand_rank(hand):
     # What would be the logic to determine if a hand is a straight or flush?
     # Let's not think about the logic in the hand_rank function
     # Instead break it down into two sub functions is_straight and is_flush
-    max_check = {'pair':[],'twopair':[],}
     if is_straight(hand) and is_flush(hand):
         return 1
     if is_fourofa_kind(hand):
