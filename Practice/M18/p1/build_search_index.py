@@ -43,7 +43,7 @@ def word_list(text):
     regex = re.compile('[^a-z]')
     text = regex.sub('', text.strip())
     return text
-    pass
+    # pass
 
 def build_search_index(docs):
     '''
