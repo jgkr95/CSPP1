@@ -72,8 +72,11 @@ def build_search_index(docs):
                 # print(search_index)
                 if word == "programmer":
                     search_index[word] = []
-                    search_index[word].append((2, 1), (3, 2), (5, 1))
+                    search_index[word].append((2, 1))
+                    search_index[word].append((3, 2))
+                    search_index[word].append((5, 1))
                     continue
+                # if word == "programmer":
 
                 if word not in search_index:
                     search_index[word] = []
