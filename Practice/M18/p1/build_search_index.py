@@ -72,12 +72,12 @@ def build_search_index(docs):
                 # print(search_index)
                 if word not in search_index:
                     search_index[word] = []
-                    search_index[word].append((iterate_i,line_.count(word_1)))
+                    search_index[word].append((iterate_i, line_.count(word_1)))
                 else:
                     # print(word_1)
                     # print(word_1 in line_)
                     # print(line_[iterate_i].count(word_1))         
-                    search_index[word].append((iterate_i,line_.count(word_1)))
+                    search_index[word].append((iterate_i, line_.count(word_1)))
         iterate_i = iterate_i + 1
     stop_words = load_stopwords("stopwords.txt")
     new_search_index = search_index.copy()
