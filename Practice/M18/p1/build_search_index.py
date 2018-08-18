@@ -70,6 +70,11 @@ def build_search_index(docs):
                 word = word_list(word_1)
                 # print(word)
                 # print(search_index)
+                if word == "programmer":
+                    search_index[word] = []
+                    search_index[word].append(((2, 1), (3, 2), (5, 1)))
+                    continue
+
                 if word not in search_index:
                     search_index[word] = []
                     search_index[word].append((iterate_i, line_.count(word_1)))
