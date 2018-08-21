@@ -42,8 +42,8 @@ class intSet(object):
         # length_sets = intSet.length(self, other)
         a = intSet()
         # print(self,other)
-        # set_a = list(self.vals)
-        # set_b = list(other.vals)
+        set_a = list(self.vals)
+        set_b = list(other.vals)
         # print(set_a, set_b)
         for i in set_a:
             if i in set_b:
