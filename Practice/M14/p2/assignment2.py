@@ -149,7 +149,7 @@ class PlaintextMessage:
     def get_message_text_encrypted(self):
         # mess = Message(self.text)
         encrypting_dict = self.get_encrypting_dict()
-        print(encrypting_dict)
+        # print(encrypting_dict)
         word_ = self.text
         # print(word_)
         cipher_ = []
