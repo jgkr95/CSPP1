@@ -85,10 +85,6 @@ class Message():
                 cipher_.append(letter_)
         return ''.join(cipher_)
 
-
-
-        
-
 def main():
     '''
         Function to handle testcases
