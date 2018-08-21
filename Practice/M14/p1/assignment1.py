@@ -65,6 +65,24 @@ WORDLIST_FILENAME = 'words.txt'
 
 
 ### Paste your implementation of the Message class here
+class Message(object):
+    def __init__(self, text):
+        # x = x.split(" ")
+        self.text = text
+        # self.shift = x[1]
+    def apply_shift(self, shift):
+        cipher_ = []
+        alphabets_ = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+        # small_letters = 'abcdefghijklmnopqrstuvwxyz'
+        for letter_ in self.text:
+            if letter_.strip() and letter_ in alphabets_:
+                cipher_.append(alphabets_[(alphabets_.index(letter_) + shift)%52])
+            else:
+                cipher_.append(letter_)
+        return ''.join(cipher_)
+
+
+
         
 
 def main():
@@ -72,7 +90,7 @@ def main():
         Function to handle testcases
     '''
     data = Message(input())
-    data.get_message_text()
+    # data.get_message_text()
     print(data.apply_shift(int(input())))
 
 if __name__ == "__main__":

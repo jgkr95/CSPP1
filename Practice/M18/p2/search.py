@@ -46,9 +46,7 @@ def search(search_index, query):
     for word in query:
         if word in search_index:
             for iterate_ in range(len(search_index[word])):
-
                 doc_id.add(search_index[word][iterate_][0])
-
     return doc_id
     # pass
 
