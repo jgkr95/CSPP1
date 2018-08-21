@@ -142,7 +142,7 @@ class PlaintextMessage:
         return self.shift
 
     def get_encrypting_dict(self):
-        shift_ = get_shift()
+        shift_ = PlaintextMessage.get_shift()
         return Message.build_shift_dict(shift_)
 
     def get_message_text_encrypted(self):
