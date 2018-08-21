@@ -157,7 +157,7 @@ class PlaintextMessage:
             if letter.strip() and letter in encrypting_dict:
                 cipher_.append(encrypting_dict[letter])
             else:
-                cipher_.append(encrypting_dict[letter])
+                cipher_.append(letter)
         return ''.join(cipher_)
 
 
