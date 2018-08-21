@@ -66,11 +66,13 @@ WORDLIST_FILENAME = 'words.txt'
 
 ### Paste your implementation of the Message class here
 class Message(object):
+    '''class'''
     def __init__(self, text):
-        # x = x.split(" ")
+        '''Init function'''
         self.text = text
         # self.shift = x[1]
     def apply_shift(self, shift):
+        ''' Apply shift'''
         cipher_ = []
         alphabets_ = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         small_letters = 'abcdefghijklmnopqrstuvwxyz'
