@@ -70,7 +70,8 @@ class Message():
     def __init__(self, text):
         '''Init function'''
         self.text = text
-        # self.shift = x[1]
+    def build_shift_dict(self, shift):
+        return self.shift
     def apply_shift(self, shift):
         ''' Apply shift'''
         cipher_ = []
