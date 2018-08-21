@@ -147,8 +147,11 @@ class PlaintextMessage:
         return mess.build_shift_dict(shift_)
 
     def get_message_text_encrypted(self):
-        encrypting_dict = get_encrypting_dict()
+        # mess = Message(self.text)
+        encrypting_dict = self.get_encrypting_dict()
+        print(encrypting_dict)
         word_ = self.text
+        # print(word_)
         cipher_ = []
         for letter in word_:
             if letter.strip() and letter in encrypting_dict:
