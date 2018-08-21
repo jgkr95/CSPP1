@@ -132,7 +132,7 @@ class PlaintextMessage:
         self.text = text
         self.shift = shift
 
-    def __str__(self, shift):
+    def __str__(self):
         return self.shift
 
     def change_shift(self, shift):
