@@ -76,7 +76,7 @@ class Message(object):
         # small_letters = 'abcdefghijklmnopqrstuvwxyz'
         for letter_ in self.text:
             if letter_.strip() and letter_ in alphabets_:
-                cipher_.append(alphabets_[(alphabets_.index(letter_) + shift)])
+                cipher_.append(alphabets_[(alphabets_.index(letter_) + shift)%52])
             else:
                 cipher_.append(letter_)
         return ''.join(cipher_)
