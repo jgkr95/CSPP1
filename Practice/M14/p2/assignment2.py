@@ -128,6 +128,7 @@ class Message():
 
 ### Helper code End
 class PlaintextMessage:
+    '''Plaintectmessage class'''
     def __init__(self, text, shift):
         '''Init function'''
         self.text = text
