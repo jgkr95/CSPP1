@@ -84,10 +84,14 @@ class Hand(object):
         """
         # Your code here
         # print("++++",self, word,"++++++")
+        count_ = 0
         for letter in word:
             if letter not in self.hand:
                 return False
-        return True
+            else:
+                self.hand[letter] -= 1
+                count_ +=1
+        return count_ == len(word)
         raise NotImplementedError()
 
     
@@ -99,5 +103,5 @@ myHand.setDummyHand('aazzmsp')
 print(myHand)
 print(myHand.calculateLen())
 
-myHand.update('za')
+print(myHand.update('za'))
 print(myHand)
