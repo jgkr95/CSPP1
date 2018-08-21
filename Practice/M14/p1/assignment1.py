@@ -65,7 +65,7 @@ WORDLIST_FILENAME = 'words.txt'
 
 
 ### Paste your implementation of the Message class here
-class Message(object):
+class Message():
     '''class'''
     def __init__(self, text):
         '''Init function'''
