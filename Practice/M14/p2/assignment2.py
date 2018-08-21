@@ -127,6 +127,37 @@ class Message(object):
         return ''.join(new_msg)
 
 ### Helper code End
+class PlaintextMessage:
+    def __init__(self, text, shift):
+        self.text = text
+        self.shift = shift
+
+    def __str__(self, shift):
+        return self.shift
+
+    def change_shift(self, shift):
+        self.shift = shift
+
+    def get_shift(self):
+        return self.shift
+
+    def get_encrypting_dict(self):
+        shift_ = get_shift()
+        return Message.build_shift_dict(shift_)
+
+    def get_message_text_encrypted(self):
+        encrypting_dict = get_encrypting_dict()
+        word_ = self.text
+        cipher_ = []
+        for letter in word_:
+            if letter.strip() and letter in encrypting_dict:
+                cipher_.append(encrypting_dict[letter])
+            else:
+                cipher_.append(encrypting_dict[letter])
+        return ''.join(cipher_)
+
+
+
 
 
 
