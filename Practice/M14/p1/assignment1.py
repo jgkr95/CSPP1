@@ -72,11 +72,13 @@ class Message(object):
         # self.shift = x[1]
     def apply_shift(self, shift):
         cipher_ = []
-        alphabets_ = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-        # small_letters = 'abcdefghijklmnopqrstuvwxyz'
+        alphabets_ = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        small_letters = 'abcdefghijklmnopqrstuvwxyz'
         for letter_ in self.text:
             if letter_.strip() and letter_ in alphabets_:
-                cipher_.append(alphabets_[(alphabets_.index(letter_) + shift)%52])
+                cipher_.append(alphabets_[(alphabets_.index(letter_) + shift)%26])
+            elif letter_.strip() and letter_ in small_letters:
+                cipher_.append(small_letters[(small_letters.index(letter_) + shift)%26])
             else:
                 cipher_.append(letter_)
         return ''.join(cipher_)
