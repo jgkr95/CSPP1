@@ -40,7 +40,7 @@ def word_list(text):
         return a list of words
     '''
     text = text.lower().strip()
-    regex = re.compile('[^a-z\s]')
+    regex = re.compile(r'[^a-z\s]')
     text = regex.sub('', text.strip())
     return text
     # pass
