@@ -146,29 +146,29 @@ class Message(object):
 class PlaintextMessage(Message):
     ''' PlaintextMessage class '''
     ### DO NOT MODIFY THIS METHOD ###
-    # def __init__(self, text, shift):
-    #     '''
-    #     Initializes a PlaintextMessage object
+    def __init__(self, text, shift):
+        '''
+        Initializes a PlaintextMessage object
 
-    #     text (string): the message's text
-    #     shift (integer): the shift associated with this message
+        text (string): the message's text
+        shift (integer): the shift associated with this message
 
-    #     A PlaintextMessage object inherits from Message and has five attributes:
-    #         self.message_text (string, determined by input text)
-    #         self.valid_words (list, determined using helper function load_words)
-    #         self.shift (integer, determined by input shift)
-    #         self.encrypting_dict (dictionary, built using shift)
-    #         self.message_text_encrypted (string, created using shift)
+        A PlaintextMessage object inherits from Message and has five attributes:
+            self.message_text (string, determined by input text)
+            self.valid_words (list, determined using helper function load_words)
+            self.shift (integer, determined by input shift)
+            self.encrypting_dict (dictionary, built using shift)
+            self.message_text_encrypted (string, created using shift)
 
-    #     Hint: consider using the parent class constructor so less
-    #     code is repeated
-    #     '''
-    #     self.text = text
-    #     self.shift = shift
-    #     self.valid_words = load_words("words.txt")
-    #     message = Message(text)
-    #     self.encrypting_dict = message.build_shift_dict(shift)
-    #     self.message_text_encrypted = message.apply_shift(shift)
+        Hint: consider using the parent class constructor so less
+        code is repeated
+        '''
+        self.text = text
+        self.shift = shift
+        self.valid_words = load_words("words.txt")
+        message = Message(text)
+        self.encrypting_dict = message.build_shift_dict(shift)
+        self.message_text_encrypted = message.apply_shift(shift)
 
     ### DO NOT MODIFY THIS METHOD ###
     def get_shift(self):
