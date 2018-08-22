@@ -68,7 +68,6 @@ def build_search_index(docs):
         for word in line_1:
             if len(word) > 1:
                 # print(word_1)
-                
                 # print(word)
                 # print(search_index)
                 # if word == "programmer":
