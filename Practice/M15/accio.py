@@ -7,7 +7,7 @@ class Spell(object):
         return self.name + ' ' + self.incantation + '\n' + self.getDescription()
               
     def getDescription(self):
-        return 'This charm summons an object to the caster, potentially over a significant distance.'
+        return 'No description'
     
     def execute(self):
         print(self.incantation)
@@ -16,6 +16,10 @@ class Spell(object):
 class Accio(Spell):
     def __init__(self):
         Spell.__init__(self, 'Accio', 'Summoning Charm')
+    def __str__(self):
+        return self.name + ' ' + self.incantation + '\n' + self.getDescription()
+    def getDescription(self):
+        return 'This charm summons an object to the caster, potentially over a significant distance.'
 
 class Confundo(Spell):
     def __init__(self):
@@ -27,6 +31,7 @@ class Confundo(Spell):
 def studySpell(spell):
     print(spell)
 
+print(Accio())
 spell = Accio()
 spell.execute()
 studySpell(spell)
