@@ -40,7 +40,7 @@ def word_list(text):
         return a list of words
     '''
     text = text.lower().strip()
-    regex = re.compile('[^a-z]')
+    regex = re.compile('[^a-z\s]')
     text = regex.sub('', text.strip())
     return text
     # pass
@@ -61,31 +61,31 @@ def build_search_index(docs):
     for line_ in docs:
         # print(line_)
         # print("=======================================")
+        line_ = word_list(line_)
         line_ = line_.split(" ")
         line_1 = set(line_)
 
-        for word_1 in line_1:
-            if len(word_1) > 1:
+        for word in line_1:
+            if len(word) > 1:
                 # print(word_1)
-                word = word_list(word_1)
+                
                 # print(word)
                 # print(search_index)
-                if word == "programmer":
-                    search_index[word] = []
-                    search_index[word].append((2, 1))
-                    search_index[word].append((3, 2))
-                    search_index[word].append((5, 1))
-                    continue
                 # if word == "programmer":
-
+                #     search_index[word] = []
+                #     search_index[word].append((2, 1))
+                #     search_index[word].append((3, 2))
+                #     search_index[word].append((5, 1))
+                #     continue
+                # if word == "programmer":
                 if word not in search_index:
                     search_index[word] = []
-                    search_index[word].append((iterate_i, line_.count(word_1)))
+                    search_index[word].append((iterate_i, line_.count(word)))
                 else:
                     # print(word_1)
                     # print(word_1 in line_)
                     # print(line_[iterate_i].count(word_1))
-                    search_index[word].append((iterate_i, line_.count(word_1)))
+                    search_index[word].append((iterate_i, line_.count(word)))
         iterate_i = iterate_i + 1
     stop_words = load_stopwords("stopwords.txt")
     new_search_index = search_index.copy()
