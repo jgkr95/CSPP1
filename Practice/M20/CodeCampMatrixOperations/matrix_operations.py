@@ -22,7 +22,7 @@ def mult_matrix(m1_, m2_):
         # print(multiply_both)
         return multiply_both
     print("Error: Matrix shapes invalid for mult")
-    return 
+    return
 def add_matrix(m1_, m2_):
     '''
         check if the matrix shapes are similar
@@ -47,7 +47,6 @@ def add_matrix(m1_, m2_):
         return add_both
     print("Error: Matrix shapes invalid for addition")
     return
-        
 def read_matrix():
     '''
         read the matrix dimensions from input
