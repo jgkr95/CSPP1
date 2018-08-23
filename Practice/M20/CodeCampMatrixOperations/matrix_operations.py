@@ -45,8 +45,9 @@ def add_matrix(m1_, m2_):
                 add_both[i].append(m1_[i][j]+m2_[i][j])
     # print(add_both)
         return add_both
-    print("Error: Matrix shapes invalid for addition")
-    return
+    else:
+        print("Error: Matrix shapes invalid for addition")
+        return
 def read_matrix():
     '''
         read the matrix dimensions from input
