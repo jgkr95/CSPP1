@@ -22,7 +22,7 @@ def mult_matrix(m1_, m2_):
                     sum_ = sum_ + m1_[i][k] * m2_[k][j]
                 multiply_both[i].append(sum_)
         # print(multiply_both)
-        return multiply_both
+    return multiply_both
 def add_matrix(m1_, m2_):
     '''
         check if the matrix shapes are similar
@@ -46,7 +46,7 @@ def add_matrix(m1_, m2_):
             for j in range(columns_1):
                 add_both[i].append(m1_[i][j]+m2_[i][j])
     # print(add_both)
-        return add_both
+    return add_both
 def read_matrix():
     '''
         read the matrix dimensions from input
