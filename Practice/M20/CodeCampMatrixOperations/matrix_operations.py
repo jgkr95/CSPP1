@@ -1,3 +1,4 @@
+'''Matrix addition and multiplication'''
 def mult_matrix(m1_, m2_):
     '''
         check if the matrix1 columns = matrix2 rows
