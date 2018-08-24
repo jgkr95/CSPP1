@@ -61,7 +61,7 @@ def decide_winner(tic_):
         c_dot += i.count('.')
     if c_dot + c_x + c_y != 9:
         return "invalid input"
-    elif abs(c_x - c_y) != 1:
+    if abs(c_x - c_y) != 1:
         return "invalid game"
     winner_ = check_lines(tic_)
     winner_1 = check_diagonal(tic_)
