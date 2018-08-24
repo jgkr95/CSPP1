@@ -48,6 +48,7 @@ def check_diagonal(toe_):
         return 'o'
     if count_ == 3 or c_x == 3:
         return 'x'
+    return None
 
 
 def decide_winner(tic_):
