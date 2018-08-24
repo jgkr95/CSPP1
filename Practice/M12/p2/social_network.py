@@ -23,7 +23,7 @@ def follow(network, arg1, arg2):
     else:
         network[arg1] = [arg2]
     # print(network)
-    # print('=======================================')     
+    # print('=======================================')
     return network
 
 
