@@ -50,7 +50,7 @@ def check_diagonal(toe_):
 
 
 def decide_winner(tic_):
-'''Deciding winner in this fucntion'''
+    '''Deciding winner in this fucntion'''
     c_y = 0
     c_x = 0
     c_dot = 0
