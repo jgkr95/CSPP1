@@ -64,9 +64,9 @@ def decide_winner(tic_):
         return "invalid game"
     winner_ = check_lines(tic_)
     winner_1 = check_diagonal(tic_)
-    if w_:
+    if winner_:
         return winner_
-    if w_1:
+    if winner_1:
         return winner_1
     return 'draw'
 
