@@ -7,7 +7,6 @@ def check_lines(tac_):
         # for j in range(3):
         line_1.append(tac_[i].count('x'))
         line_2.append(tac_[i].count('o'))
-    
     countlist_x = []
     countlist_y = []
     for i in range(3):
