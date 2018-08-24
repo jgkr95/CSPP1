@@ -62,12 +62,12 @@ def decide_winner(tic_):
         return "invalid input"
     elif abs(c_x - c_y) != 1:
         return "invalid game"
-    w_ = check_lines(tic_)
-    w_1 = check_diagonal(tic_)
+    winner_ = check_lines(tic_)
+    winner_1 = check_diagonal(tic_)
     if w_:
-        return w_
+        return winner_
     if w_1:
-        return w_1
+        return winner_1
     return 'draw'
 
 def main():
