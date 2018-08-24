@@ -19,7 +19,7 @@ def follow(network, arg1, arg2):
         if arg2 not in network[arg1]:
             network[arg1].append(arg2)
     else:
-        network[arg1] = [arg2]
+        network[arg1].append(arg2)
     # print(network)        
     return network
 
