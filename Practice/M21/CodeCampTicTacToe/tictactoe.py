@@ -20,11 +20,11 @@ def check_lines(tac_):
         countlist_y.append(count_y)
     if 3 in line_1:
         return 'x'
-    elif 3 in line_2:
+    if 3 in line_2:
         return 'o'
-    elif 3 in countlist_x:
+    if 3 in countlist_x:
         return 'x'
-    elif 3 in countlist_y:
+    if 3 in countlist_y:
         return 'o'
 
 def check_diagonal(toe_):
