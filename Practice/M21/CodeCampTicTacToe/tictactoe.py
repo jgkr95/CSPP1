@@ -46,7 +46,7 @@ def check_diagonal(toe_):
         c_y += toe_[len_-1-i][i].count('o')
     if count_1 == 3 or c_y == 3:
         return 'o'
-    elif count_ == 3 or c_x == 3:
+    if count_ == 3 or c_x == 3:
         return 'x'
 
 
