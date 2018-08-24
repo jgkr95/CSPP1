@@ -25,6 +25,7 @@ def check_lines(tac_):
         return 'x'
     if 3 in countlist_y:
         return 'o'
+    return None
 
 def check_diagonal(toe_):
     ''' Checking diagonals here'''
