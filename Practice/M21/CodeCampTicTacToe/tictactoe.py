@@ -64,11 +64,15 @@ def decide_winner(tic_):
 	# 			return "invalid input"
 	c_y = 0
 	c_x = 0
+	c_dot = 0
 	for i in tic_:
 		c_x += i.count('x')
 		c_y += i.count('o')
+		c_dot += i.count('.')
 	if abs(c_x - c_y) != 1:
 		return "invalid game"
+	elif c_dot + c_x + c_y != 9:
+		return "invalid input"
 	w_ = check_lines(tic_)
 	w_1 = check_diagonal(tic_)
 	if w_:
