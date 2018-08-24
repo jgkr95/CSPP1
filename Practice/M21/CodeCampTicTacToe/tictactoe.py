@@ -1,5 +1,6 @@
 '''Implement TicTacToe'''
 def check_lines(tac_):
+    '''Checking rows and columns here'''
     line_1 = []
     line_2 = []
     for i in range(3):
@@ -25,15 +26,8 @@ def check_lines(tac_):
     elif 3 in countlist_y:
         return 'o'
 
-
-
-
-
-
-
-            # if tac_[0][0] == tac_[0][1] == tac_[0][2]:
-            #   return 
 def check_diagonal(toe_):
+    ''' Checking diagonals here'''
     count_ = 0
     count_1 = 0
     for i in range(3):
@@ -56,12 +50,7 @@ def check_diagonal(toe_):
 
 
 def decide_winner(tic_):
-    # for i in tic_:
-    #   for j in 'xo.':
-    #       if j in i:
-    #           continue
-    #       else:
-    #           return "invalid input"
+'''Deciding winner in this fucntion'''
     c_y = 0
     c_x = 0
     c_dot = 0
@@ -69,7 +58,6 @@ def decide_winner(tic_):
         c_x += i.count('x')
         c_y += i.count('o')
         c_dot += i.count('.')
-    
     if c_dot + c_x + c_y != 9:
         return "invalid input"
     elif abs(c_x - c_y) != 1:
@@ -82,9 +70,8 @@ def decide_winner(tic_):
         return w_1
     return 'draw'
 
-
-
 def main():
+    '''This is main function'''
     tic_tac = []
     for i in range(3):
         tic_tac.append([])
