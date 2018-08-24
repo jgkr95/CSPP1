@@ -52,7 +52,7 @@ def delete_person(network, arg1):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    print(network)
+    # print(network)
     for index_ in network:
         if arg1 in network[index_]:
             network[index_].remove(arg1)
