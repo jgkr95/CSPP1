@@ -41,7 +41,7 @@ def check_diagonal(toe_):
     len_ = len(toe_[0])
     c_x = 0
     c_y = 0
-    for i in range(len_-1,-1,-1):
+    for i in range(len_-1, -1, -1):
         c_x += toe_[len_-1-i][i].count('x')
         c_y += toe_[len_-1-i][i].count('o')
     if count_1 == 3 or c_y == 3:
