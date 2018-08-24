@@ -15,12 +15,15 @@ def follow(network, arg1, arg2):
     '''
     # remove the pass below and start writing your code
     # print(network)
+    # print("======================================")
     if arg1 in network:
+        # print(arg1)
         if arg2 not in network[arg1]:
             network[arg1].append(arg2)
     else:
         network[arg1] = [arg2]
-    # print(network)        
+    # print(network)
+    # print('=======================================')     
     return network
 
 
@@ -35,9 +38,10 @@ def unfollow(network, arg1, arg2):
     '''
     # remove the pass below and start writing your code
     # print(network)
-    for arg2 in network:
-        if arg1 in network[arg2]:
-            network[arg2].remove(arg1)
+    for arg1 in network:
+        # print(arg2)
+        if arg2 in network[arg1]:
+            network[arg1].remove(arg2)
     # print(network)
     return network
 
