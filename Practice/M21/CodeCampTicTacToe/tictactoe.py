@@ -7,10 +7,7 @@ def check_lines(tac_):
         # for j in range(3):
         line_1.append(tac_[i].count('x'))
         line_2.append(tac_[i].count('o'))
-    if 3 in line_1:
-        return 'x'
-    elif 3 in line_2:
-        return 'o'
+    
     countlist_x = []
     countlist_y = []
     for i in range(3):
@@ -21,7 +18,11 @@ def check_lines(tac_):
             count_y += tac_[j][i].count('o')
         countlist_x.append(count_x)
         countlist_y.append(count_y)
-    if 3 in countlist_x:
+    if 3 in line_1:
+        return 'x'
+    elif 3 in line_2:
+        return 'o'
+    elif 3 in countlist_x:
         return 'x'
     elif 3 in countlist_y:
         return 'o'
