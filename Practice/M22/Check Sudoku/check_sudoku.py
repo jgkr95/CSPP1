@@ -27,17 +27,13 @@ def check_sudoku(sudoku):
     for i in range(0, 3):
         for j in sudoku[i][0:3]:
             sum_grids[0] += j
-        # print(sudoku[i][0:3])
         for k in  sudoku[i][3:6]:
             sum_grids[1] += k
-        # print(sudoku[i][3:6])
         for l_l in sudoku[i][6:9]:
             sum_grids[2] += l_l
-        # print(sudoku[i][6:9])
     for i in range(3, 6):
         for j in sudoku[i][0:3]:
             sum_grids[3] += j
-        # print(sudoku[i][0:3])
         for k in sudoku[i][3:6]:
             sum_grids[4] += k
         for l_l in sudoku[i][6:9]:
