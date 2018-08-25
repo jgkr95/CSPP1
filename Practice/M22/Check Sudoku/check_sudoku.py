@@ -23,8 +23,8 @@ def check_sudoku(sudoku):
             sum_of_column += sudoku[j][i]
         if sum_of_column != 45:
             return False
-    sum_grids = [0,0,0,0,0,0,0,0,0]
-    for i in range(0,3):
+    sum_grids = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    for i in range(0, 3):
         for j in sudoku[i][0:3]:
             sum_grids[0] += j
         # print(sudoku[i][0:3])
@@ -34,7 +34,7 @@ def check_sudoku(sudoku):
         for l in sudoku[i][6:9]:
             sum_grids[2] += l
         # print(sudoku[i][6:9])
-    for i in range(3,6):
+    for i in range(3, 6):
         for j in sudoku[i][0:3]:
             sum_grids[3] += j
         # print(sudoku[i][0:3])
@@ -42,7 +42,7 @@ def check_sudoku(sudoku):
             sum_grids[4] += k
         for l in sudoku[i][6:9]:
             sum_grids[5] += l
-    for i in range(6,9):
+    for i in range(6, 9):
         for j in sudoku[i][0:3]:
             sum_grids[6] += j
         for k in sudoku[i][3:6]:
