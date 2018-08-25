@@ -8,6 +8,7 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def check_grid(sudoku):
+    '''checking grids'''
     sum_grids = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     for i in range(0, 3):
         for j in sudoku[i][0:3]:
