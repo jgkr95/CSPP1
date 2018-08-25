@@ -52,9 +52,6 @@ def check_sudoku(sudoku):
     if sum(sum_grids) == 405:
         return True
 
-        
-    # return True
-
 def main():
     '''
         main function to read input sudoku from console
