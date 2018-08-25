@@ -51,6 +51,7 @@ def check_sudoku(sudoku):
             sum_grids[8] += l_l
     if sum(sum_grids) == 405:
         return True
+    return None
 
 def main():
     '''
