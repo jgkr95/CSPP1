@@ -50,30 +50,6 @@ def check_sudoku(sudoku):
             sum_of_column += sudoku[j][i]
         if sum_of_column != 45:
             return False
-    # sum_grids = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-    # for i in range(0, 3):
-    #     for j in sudoku[i][0:3]:
-    #         sum_grids[0] += j
-    #     for k in  sudoku[i][3:6]:
-    #         sum_grids[1] += k
-    #     for l_l in sudoku[i][6:9]:
-    #         sum_grids[2] += l_l
-    # for i in range(3, 6):
-    #     for j in sudoku[i][0:3]:
-    #         sum_grids[3] += j
-    #     for k in sudoku[i][3:6]:
-    #         sum_grids[4] += k
-    #     for l_l in sudoku[i][6:9]:
-    #         sum_grids[5] += l_l
-    # for i in range(6, 9):
-    #     for j in sudoku[i][0:3]:
-    #         sum_grids[6] += j
-    #     for k in sudoku[i][3:6]:
-    #         sum_grids[7] += k
-    #     for l_l in sudoku[i][6:9]:
-    #         sum_grids[8] += l_l
-    # if sum(sum_grids) == 405:
-    #     return True
     return check_grid(sudoku)
 
 def main():
