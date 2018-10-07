@@ -92,8 +92,8 @@ def main():
     '''
         Function to handle testcases
     '''
-    data = input()
-    data = Message(data)
+    dat = input()
+    data = Message(dat)
     # data.get_message_text()
     print(data.apply_shift(int(input())))
 
